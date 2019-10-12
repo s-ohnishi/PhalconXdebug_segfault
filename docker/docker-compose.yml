@@ -1,0 +1,15 @@
+version: "3"
+services:
+  testweb:
+    build: .
+    container_name: phalcon-xdebug
+    ports:
+      - 80:80
+    volumes:
+      - ./sites-enabled:/etc/apache2/sites-enabled
+      - ./php.extra.d:/etc/php.extra.d
+      - ../sites:/var/www
+    ulimits:
+      core: 9999999
+    privileged: true
+
