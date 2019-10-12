@@ -26,6 +26,8 @@ RUN set -eux; \
     php-gettext \
     php-pear \
     php-xdebug \
+    php7.3-dev \
+    gdb \
     php7.3-mailparse; \
   curl -s https://packagecloud.io/install/repositories/phalcon/stable/script.deb.sh | bash; \
   apt-get update; \
